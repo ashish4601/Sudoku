@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    gap: 1px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.cell:focus {
+    border: 1px solid #3498db;
+}
+
+.cell.active {
+    background-color: #f8c291; /* Light orange */
+}
+
+.cell.current {
+    background-color: #82ccdd; /* Light blue */
+}
+
+/* Apply background colors for visual distinction */
+.board .cell:nth-child(odd) {
+    background-color: #f0f0f0; /* Light grey */
+}
+
+.board .cell:nth-child(even) {
+    background-color: #e0e0e0; /* Lighter grey */
+}
+
+/* Additional classes for highlighting */
+.cell.invalid {
+    background-color: #ffbaba; /* Light red */
+}
+
+.cell.correct {
+    background-color: #0fe03d; /* Light green */
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+/* Add styles for currently entered and backtracked numbers */
+/* Add styles for currently entered and backtracked numbers */
+.cell.entered {
+    color: #2980b9; /* Dark blue */
+    font-weight: bold;
+}
+
+.cell.backtracked {
+    color: #e74c3c; /* Dark red */
+}
